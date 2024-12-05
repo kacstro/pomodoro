@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F0FF"
+    android:padding="16dp">
+
+    <!-- Cartão de lembrete -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEMBRETE"
+            android:textColor="#800080"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenha orgulho das suas conquistas. Tudo o que vale a pena, leva tempo."
+            android:textColor="#800080"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+    </LinearLayout>
+
+    <!-- Barra de progresso circular -->
+    <FrameLayout
+        android:id="@+id/progress_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <!-- Barra de progresso -->
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/circular_progress"
+            android:max="100"
+            android:progress="50" />
+
+        <!-- Número do timer -->
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4:59"
+            android:textColor="#800080"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:shadowColor="#800080"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2" />
+    </FrameLayout>
+
+    <!-- Texto de foco -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/finish_button"
+        android:layout_marginTop="16dp"
+        android:text="hora de manter o foco!"
+        android:textColor="#800080"
+        android:textStyle="italic"
+        android:textSize="24sp" />
+
+    <!-- Botão Finalizar -->
+    <Button
+        android:id="@+id/finish_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:text="Finalizar"
+        android:textStyle="bold"
+        android:backgroundTint="#800080"
+        android:textColor="#FFFFFF"
+        android:layout_margin="16dp" />
+</RelativeLayout>
