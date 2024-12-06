@@ -2,5 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="gradientBackground">#A1C4FD</color>
+    <color name="purple">#521650</color>
+    <color name="bg_purple">#f1ecf6</color>
 </resources>

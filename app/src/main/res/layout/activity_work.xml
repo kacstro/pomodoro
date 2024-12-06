@@ -6,7 +6,25 @@
     android:background="#F7F0FF"
     android:padding="16dp">
 
-    <!-- Cartão de lembrete -->
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="top"
+        android:text="Pomodoro"
+        android:textColor="#800080"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,9 +32,8 @@
         android:background="@color/white"
         android:padding="16dp"
         android:layout_marginBottom="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_below="@id/title_layout"
         >
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,14 +52,12 @@
             android:lineSpacingExtra="4dp" />
     </LinearLayout>
 
-    <!-- Barra de progresso circular -->
     <FrameLayout
         android:id="@+id/progress_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true">
 
-        <!-- Barra de progresso -->
         <ProgressBar
             android:id="@+id/progress_circular"
             style="?android:attr/progressBarStyleHorizontal"
@@ -52,14 +67,13 @@
             android:indeterminateOnly="false"
             android:progressDrawable="@drawable/circular_progress"
             android:max="100"
-            android:progress="50" />
+            android:progress="100" />
 
-        <!-- Número do timer -->
         <TextView
-            android:id="@+id/timer_text"
+            android:id="@+id/timerTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4:59"
+            android:text="00:00"
             android:textColor="#800080"
             android:textSize="48sp"
             android:textStyle="bold"
@@ -70,28 +84,65 @@
             android:shadowRadius="2" />
     </FrameLayout>
 
-    <!-- Texto de foco -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_above="@id/finish_button"
         android:layout_marginTop="16dp"
+        android:layout_above="@+id/buttons"
         android:text="hora de manter o foco!"
         android:textColor="#800080"
         android:textStyle="italic"
         android:textSize="24sp" />
 
-    <!-- Botão Finalizar -->
-    <Button
-        android:id="@+id/finish_button"
+    <LinearLayout
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
-        android:text="Finalizar"
-        android:textStyle="bold"
-        android:backgroundTint="#800080"
-        android:textColor="#FFFFFF"
-        android:layout_margin="16dp" />
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/button_reset"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#f1ecf6"
+            android:src="@drawable/rotate_right_solid"
+            android:tint="@color/purple"
+            />
+
+        <ImageButton
+            android:id="@+id/button_play"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/circular_background"
+            android:src="@drawable/play_solid"
+            android:visibility="visible"
+            android:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/button_pause"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/circular_background"
+            android:src="@drawable/pause_solid"
+            android:visibility="gone"
+            android:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/button_settings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#f1ecf6"
+            android:src="@drawable/gear_solid"
+            android:tint="@color/purple"
+            />
+
+    </LinearLayout>
 </RelativeLayout>
