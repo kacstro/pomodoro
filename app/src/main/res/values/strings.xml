@@ -1,7 +1,13 @@
 <resources>
-    <string name="app_name">pomodoro</string>
-    <string name="iniciar">Iniciar1</string>
-    <string name="tempo_de_intervalo">Tempo de intervalo</string>
-    <string name="tempo_de_foco">Tempo de foco</string>
-    <string name="descricao_app">Você sabia? O método Pomodoro pode turbinar sua produtividade! Trabalhe por um período focado, faça uma pausa rápida e repita. É uma técnica simples, mas poderosa para manter o foco, reduzir distrações e alcançar mais resultados.</string>
+    <string name="foco">hora de manter o foco!</string>
+    <string name="lembrete">LEMBRETE</string>
+    <string name="frase">Tenha orgulho das suas conquistas. Tudo o que vale a pena, leva tempo.</string>
+    <string name="name_app">Pomodoro</string>
+    <string name="pausa">Hora de dar uma pausa!</string>
+    <string name="intervalo_de_foco">Intervalo de foco</string>
+    <string name="tempo_foco_padrao">25:00</string>
+    <string name="intervalo_de_descanso">Intervalo de descanso</string>
+    <string name="tempo_rest_padrao">05:00</string>
+    <string name="salvar">Salvar</string>
+    <string name="tempo_zerado">00:00</string>
 </resources>

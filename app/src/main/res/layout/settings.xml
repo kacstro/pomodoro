@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="top"
+            android:text="@string/name_app"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/intervalo_de_foco"
+                android:textColor="#800080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/timeFocusEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="start"
+                android:textSize="50sp"
+                android:inputType="none"
+                android:hint="@string/tempo_foco_padrao"
+                android:maxLength="5"
+                android:focusable="false"
+                android:textColor="#800080" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#800080" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/intervalo_de_descanso"
+                android:textColor="#800080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/timeRestEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="start"
+                android:textSize="50sp"
+                android:inputType="none"
+                android:hint="@string/tempo_rest_padrao"
+                android:maxLength="5"
+                android:focusable="false"
+                android:textColor="#800080" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#800080" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#800080"
+        android:text="@string/salvar"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+</RelativeLayout>

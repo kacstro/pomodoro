@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F0FF"
+    android:background="@color/bg_purple"
     android:padding="16dp">
 
     <LinearLayout
@@ -16,9 +17,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="25sp"
         android:gravity="top"
-        android:text="Pomodoro"
+        android:text="@string/name_app"
         android:textColor="#800080"
         android:textSize="32sp"
         android:textStyle="bold" />
@@ -37,7 +39,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LEMBRETE"
+            android:text="@string/lembrete"
             android:textColor="#800080"
             android:textStyle="bold"
             android:textSize="14sp"
@@ -46,7 +48,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tenha orgulho das suas conquistas. Tudo o que vale a pena, leva tempo."
+            android:text="@string/frase"
             android:textColor="#800080"
             android:textSize="14sp"
             android:lineSpacingExtra="4dp" />
@@ -73,7 +75,7 @@
             android:id="@+id/timerTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00:00"
+            android:text="@string/tempo_foco_padrao"
             android:textColor="#800080"
             android:textSize="48sp"
             android:textStyle="bold"
@@ -85,12 +87,13 @@
     </FrameLayout>
 
     <TextView
+        android:id="@+id/typeTimeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:layout_above="@+id/buttons"
-        android:text="hora de manter o foco!"
+        android:text="@string/foco"
         android:textColor="#800080"
         android:textStyle="italic"
         android:textSize="24sp" />
@@ -108,7 +111,7 @@
             android:id="@+id/button_reset"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="#f1ecf6"
+            android:background="@android:color/transparent"
             android:src="@drawable/rotate_right_solid"
             android:tint="@color/purple"
             />
@@ -139,7 +142,7 @@
             android:id="@+id/button_settings"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="#f1ecf6"
+            android:background="@android:color/transparent"
             android:src="@drawable/gear_solid"
             android:tint="@color/purple"
             />
